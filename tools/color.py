@@ -105,6 +105,7 @@ def build():
       'status':'candidate; yellow-green direction selected by Matt; full palette pending review',
       'ground':{'hex':GROUND,'L':L,'C':C,'h':h},
       'signal_hue':signal,'tokens':colors,'derivation':records,
+      'semantic_roles':{'identity':'accent','focus':'accent','keyword':'magenta','function':'cyan','literal':'orange'},
       'minimum_selected_syntax_contrast':min(token_ratios),
       'method':'Oklab/OKLCH, chroma reduction at fixed L/h into sRGB, then 8-bit rounding; contrast measured after rounding.'
     }

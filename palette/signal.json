@@ -128,6 +128,13 @@
       "contrast_panel": 6.810671006042558
     }
   },
+  "semantic_roles": {
+    "identity": "accent",
+    "focus": "accent",
+    "keyword": "magenta",
+    "function": "cyan",
+    "literal": "orange"
+  },
   "minimum_selected_syntax_contrast": 4.913797901251115,
   "method": "Oklab/OKLCH, chroma reduction at fixed L/h into sRGB, then 8-bit rounding; contrast measured after rounding."
 }

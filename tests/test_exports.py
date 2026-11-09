@@ -50,6 +50,7 @@ class ExportTests(unittest.TestCase):
         self.assertEqual(theme['colors']['editor.background'],self.c['bg'])
         self.assertEqual(theme['colors']['editorCursor.foreground'],self.c['accent'])
         self.assertEqual(theme['semanticTokenColors']['function'],self.c['cyan'])
+        self.assertEqual(theme['semanticTokenColors']['keyword'],self.c[self.doc['semantic_roles']['keyword']])
         self.assertTrue(theme['semanticHighlighting'])
         for value in theme['colors'].values():self.assertRegex(value,r'^#[0-9a-f]{6}([0-9a-f]{2})?$')
 

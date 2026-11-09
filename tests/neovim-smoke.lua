@@ -1,12 +1,13 @@
 local ok, err = pcall(function()
   vim.opt.rtp:append('ports/neovim')
   vim.cmd('colorscheme deliverator-signal')
-  local palette = vim.fn.json_decode(table.concat(vim.fn.readfile('palette/signal.json'), '\n')).tokens
+  local document = vim.fn.json_decode(table.concat(vim.fn.readfile('palette/signal.json'), '\n'))
+  local palette = document.tokens
   assert(vim.g.colors_name == 'deliverator-signal')
   local normal = vim.api.nvim_get_hl(0, { name = 'Normal' })
   assert(normal.bg == tonumber(palette.bg:sub(2), 16))
   local keyword = vim.api.nvim_get_hl(0, { name = 'Keyword' })
-  assert(keyword.fg == tonumber(palette.accent:sub(2), 16))
+  assert(keyword.fg == tonumber(palette[document.semantic_roles.keyword]:sub(2), 16))
   assert(vim.g.terminal_color_0 and vim.g.terminal_color_15)
 end)
 if not ok then

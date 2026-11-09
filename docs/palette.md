@@ -31,7 +31,7 @@ At each requested L and h, binary search reduces chroma until all three linear-s
 
 The current ten text/status inks exceed 6.2:1 on the panel. The three principal selected pills and the checked highlighted-code combinations meet 4.5:1; body ink on selected rows exceeds 7:1. Contrast is measured from final rounded values. These results do not certify arbitrary foreground/background combinations or a whole application’s accessibility.
 
-Signal marks active controls and keywords. Cyan carries function flow. Amber-orange carries literals and branch choice. Other hues serve semantic roles and diagnostics; a port should not assign all of them equal visual weight.
+Signal marks identity, focus and primary actions. It is not a universal syntax or semantic color. Keywords and quotation use magenta, functions use cyan, and literals use amber-orange. Other hues serve distinct semantic roles and diagnostics. The source JSON records these assignments under `semantic_roles`; a port must preserve those roles instead of painting every control with the signature color.
 
 ANSI bright inks use `L + 0.07`, `C * 0.88`, and the same hue, followed by the same gamut constraint. Bright black is the muted ink; bright white uses L=.98 and C=.003. The normal ANSI palette preserves the system’s semantic ink colors, so some tools may show a subtler normal/bright distinction than older terminal themes.
 

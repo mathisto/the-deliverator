@@ -16,7 +16,7 @@ SLUG='deliverator-signal'
 def json_text(value):return json.dumps(value,indent=2,ensure_ascii=False)+'\n'
 
 def outputs():
-    doc=build();c=doc['tokens'];out={}
+    doc=build();c=doc['tokens'];out={};keyword=c[doc['semantic_roles']['keyword']]
     out['palette/signal.json']=json_text(doc)
     out['palette/signal.css']='/* Generated: Signal study, not a stable release. */\n:root{'+''.join('--'+k+':'+v+';' for k,v in c.items())+'}\n'
     out['palette/signal.toml']='family = "The Deliverator"\nvariant = "Signal study"\n\n[colors]\n'+'\n'.join(f'{k.replace("-","_")} = "{v}"' for k,v in c.items() if k!='line')+'\n'
@@ -35,7 +35,7 @@ def outputs():
 
     scopes=[
       ('Comments','comment',c['muted']),
-      ('Keywords','keyword, storage.type, storage.modifier',c['accent']),
+      ('Keywords','keyword, storage.type, storage.modifier',keyword),
       ('Functions','entity.name.function, support.function',c['cyan']),
       ('Strings','string, constant.other.symbol',c['orange']),
       ('Numbers and constants','constant.numeric, constant.language',c['yellow']),
@@ -71,7 +71,7 @@ def outputs():
     for k,v in bright.items():ui['terminal.ansiBright'+k.title()]=v
     theme={'name':NAME,'type':'dark','semanticHighlighting':True,'colors':ui,
       'tokenColors':token_colors,'semanticTokenColors':{
-        'keyword':c['accent'],'function':c['cyan'],'method':c['cyan'],
+        'keyword':keyword,'function':c['cyan'],'method':c['cyan'],
         'type':c['blue'],'class':c['blue'],'variable':c['fg'],
         'parameter':c['fg'],'property':c['fg'],'string':c['orange'],
         'number':c['yellow'],'comment':c['muted']}}
@@ -97,9 +97,9 @@ def outputs():
       'FloatBorder':{'fg':c['line'],'bg':c['bg-alt']},'Comment':{'fg':c['muted']},
       'Constant':{'fg':c['yellow']},'String':{'fg':c['orange']},'Character':{'fg':c['orange']},
       'Number':{'fg':c['yellow']},'Boolean':{'fg':c['yellow']},'Identifier':{'fg':c['fg']},
-      'Function':{'fg':c['cyan']},'Statement':{'fg':c['accent']},'Keyword':{'fg':c['accent']},
-      'Conditional':{'fg':c['accent']},'Repeat':{'fg':c['accent']},'Operator':{'fg':c['cyan']},
-      'PreProc':{'fg':c['accent']},'Type':{'fg':c['blue']},'Special':{'fg':c['cyan']},
+      'Function':{'fg':c['cyan']},'Statement':{'fg':keyword},'Keyword':{'fg':keyword},
+      'Conditional':{'fg':keyword},'Repeat':{'fg':keyword},'Operator':{'fg':c['cyan']},
+      'PreProc':{'fg':keyword},'Type':{'fg':c['blue']},'Special':{'fg':c['cyan']},
       'Delimiter':{'fg':c['muted']},'Error':{'fg':c['red']},'Todo':{'fg':c['bg'],'bg':c['accent'],'bold':True},
       'LineNr':{'fg':c['muted']},'CursorLineNr':{'fg':c['accent']},'CursorLine':{'bg':c['bg-alt']},
       'ColorColumn':{'bg':c['bg-alt']},'Visual':{'bg':c['bg-hl']},

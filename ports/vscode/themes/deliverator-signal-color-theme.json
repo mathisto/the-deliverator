@@ -73,7 +73,7 @@
       "name": "Keywords",
       "scope": "keyword, storage.type, storage.modifier",
       "settings": {
-        "foreground": "#d5e500"
+        "foreground": "#db93de"
       }
     },
     {
@@ -141,7 +141,7 @@
     }
   ],
   "semanticTokenColors": {
-    "keyword": "#d5e500",
+    "keyword": "#db93de",
     "function": "#5ed1de",
     "method": "#5ed1de",
     "type": "#8bafff",
