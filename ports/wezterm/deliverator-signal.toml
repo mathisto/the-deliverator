@@ -1,0 +1,14 @@
+[colors]
+foreground = "#e8e9ee"
+background = "#171922"
+cursor_bg = "#d5e500"
+cursor_fg = "#171922"
+cursor_border = "#d5e500"
+selection_bg = "#2d2f37"
+selection_fg = "#e8e9ee"
+ansi = ["#2d2f37", "#ff7e77", "#6ed274", "#f1cf44", "#8bafff", "#db93de", "#5ed1de", "#e8e9ee"]
+brights = ["#a1a4b0", "#ffa59e", "#90e693", "#ffe890", "#adc7ff", "#eeadf0", "#86e6f1", "#f8f8fa"]
+
+[metadata]
+name = "The Deliverator — Signal study"
+author = "Matt Kelly"

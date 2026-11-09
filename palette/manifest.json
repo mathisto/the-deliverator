@@ -1,0 +1,20 @@
+{
+  "status": "preview",
+  "files": {
+    "assets/header.svg": "04ea438ac5caa5f22938b24496062810982af543611ff8ee0a94897c401b3226",
+    "assets/palette.svg": "c3578d7740b015d90bba8918d807cfbbac4c33e7e8a287537f480f326b98e954",
+    "palette/ansi.json": "9dc3b69171ef7535c33888aed3e27c76c15b15c00315ee0440c92c26904bdabe",
+    "palette/signal.css": "50060a64ca3bb5c365b9c65fc7b5bf8a54b365a4d4cb59f5bf3e4ec7538c1733",
+    "palette/signal.json": "75a717a060df5c18dda1ae58e46a4a22d6428fc40639b440064a7301c5915496",
+    "palette/signal.toml": "99a8cdd6ce01f45844377641880938b06b8e34dbf545912062d7bf3c89adcc72",
+    "ports/alacritty/deliverator-signal.toml": "a39f2ed4c86e72d5821300328f1f374f7db8d2b20d29c20b03712ae5ebd4b13b",
+    "ports/bat/Deliverator-Signal.tmTheme": "44ad49d72aa5433a992d0f7e50f4688f247e2cd22a57627ad0dc76b353f68f03",
+    "ports/kitty/deliverator-signal.conf": "db01505cdd32df713ac32a1db6ae47490dcbdb54a6c03043d832f23df28d924a",
+    "ports/neovim/colors/deliverator-signal.lua": "13fef72e8be1e7e638afebc2dbcb1957ba078179f82cf13e0cc3a9b12210ea23",
+    "ports/textmate/Deliverator-Signal.tmTheme": "44ad49d72aa5433a992d0f7e50f4688f247e2cd22a57627ad0dc76b353f68f03",
+    "ports/vscode/package.json": "e18d7b878a1241017b62602a2512bdf0ce0f506d3b5d022b0bdc8b572f368f10",
+    "ports/vscode/themes/deliverator-signal-color-theme.json": "d8c45c1638c4335071729ae36ba794be1ca2f1d2525973eca24ae5beee1a3aaa",
+    "ports/wezterm/deliverator-signal.toml": "28757fe6fa7f7c23ac91e3eb912df6ec9f1adfa2bc66467b6c2221702b556a83",
+    "ports/windows-terminal/deliverator-signal.json": "12aec0965d0ea5f2959868c323833d5ed0ab5db650076cef88d6c278b4843e32"
+  }
+}

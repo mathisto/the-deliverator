@@ -1,0 +1,23 @@
+{
+  "name": "The Deliverator — Signal study",
+  "background": "#171922",
+  "foreground": "#e8e9ee",
+  "cursorColor": "#d5e500",
+  "selectionBackground": "#2d2f37",
+  "black": "#2d2f37",
+  "red": "#ff7e77",
+  "green": "#6ed274",
+  "yellow": "#f1cf44",
+  "blue": "#8bafff",
+  "magenta": "#db93de",
+  "cyan": "#5ed1de",
+  "white": "#e8e9ee",
+  "brightBlack": "#a1a4b0",
+  "brightRed": "#ffa59e",
+  "brightGreen": "#90e693",
+  "brightYellow": "#ffe890",
+  "brightBlue": "#adc7ff",
+  "brightMagenta": "#eeadf0",
+  "brightCyan": "#86e6f1",
+  "brightWhite": "#f8f8fa"
+}

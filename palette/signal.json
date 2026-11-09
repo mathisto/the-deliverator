@@ -1,0 +1,133 @@
+{
+  "id": "deliverator-signal",
+  "name": "Deliverator · Signal study",
+  "status": "candidate; yellow-green direction selected by Matt; full palette pending review",
+  "ground": {
+    "hex": "#171922",
+    "L": 0.21554316135260027,
+    "C": 0.017981137207900615,
+    "h": 275.01496746629897
+  },
+  "signal_hue": 115.01496746629897,
+  "tokens": {
+    "bg": "#171922",
+    "bg-alt": "#22242c",
+    "bg-hl": "#2d2f37",
+    "line": "#44464d",
+    "fg": "#e8e9ee",
+    "muted": "#a1a4b0",
+    "accent": "#d5e500",
+    "red": "#ff7e77",
+    "orange": "#ffa14c",
+    "yellow": "#f1cf44",
+    "green": "#6ed274",
+    "cyan": "#5ed1de",
+    "blue": "#8bafff",
+    "magenta": "#db93de"
+  },
+  "derivation": {
+    "bg-alt": {
+      "hex": "#22242c",
+      "L": 0.26054316135260025,
+      "C_requested": 0.016542646231268564,
+      "C_srgb": 0.016542646231268505,
+      "h": 275.01496746629897
+    },
+    "bg-hl": {
+      "hex": "#2d2f37",
+      "L": 0.3055431613526003,
+      "C_requested": 0.015104155254636516,
+      "C_srgb": 0.015104155254636462,
+      "h": 275.01496746629897
+    },
+    "line": {
+      "hex": "#44464d",
+      "L": 0.39554316135260026,
+      "C_requested": 0.012227173301372418,
+      "C_srgb": 0.012227173301372374,
+      "h": 275.01496746629897
+    },
+    "fg": {
+      "hex": "#e8e9ee",
+      "L": 0.935,
+      "C_requested": 0.006,
+      "C_srgb": 0.005999999999999979,
+      "h": 275.01496746629897,
+      "contrast_panel": 12.766911372798877
+    },
+    "muted": {
+      "hex": "#a1a4b0",
+      "L": 0.72,
+      "C_requested": 0.018,
+      "C_srgb": 0.017999999999999933,
+      "h": 275.01496746629897,
+      "contrast_panel": 6.230034008881845
+    },
+    "accent": {
+      "hex": "#d5e500",
+      "L": 0.88,
+      "C_requested": 0.2,
+      "C_srgb": 0.19943259332115418,
+      "h": 115.01496746629897,
+      "contrast_panel": 11.083176767824057
+    },
+    "red": {
+      "hex": "#ff7e77",
+      "L": 0.74,
+      "C_requested": 0.17,
+      "C_srgb": 0.1582624892621436,
+      "h": 25.01496746629897,
+      "contrast_panel": 6.267040925513053
+    },
+    "orange": {
+      "hex": "#ffa14c",
+      "L": 0.79,
+      "C_requested": 0.155,
+      "C_srgb": 0.14861080282289257,
+      "h": 60.01496746629897,
+      "contrast_panel": 7.705481193111565
+    },
+    "yellow": {
+      "hex": "#f1cf44",
+      "L": 0.86,
+      "C_requested": 0.155,
+      "C_srgb": 0.15499999999999947,
+      "h": 95.01496746629897,
+      "contrast_panel": 10.133695148189895
+    },
+    "green": {
+      "hex": "#6ed274",
+      "L": 0.78,
+      "C_requested": 0.16,
+      "C_srgb": 0.15999999999999942,
+      "h": 145.01496746629897,
+      "contrast_panel": 8.206329582099738
+    },
+    "cyan": {
+      "hex": "#5ed1de",
+      "L": 0.8,
+      "C_requested": 0.105,
+      "C_srgb": 0.10499999999999962,
+      "h": 205.01496746629897,
+      "contrast_panel": 8.587450087707762
+    },
+    "blue": {
+      "hex": "#8bafff",
+      "L": 0.76,
+      "C_requested": 0.13,
+      "C_srgb": 0.12212539266629872,
+      "h": 265.01496746629897,
+      "contrast_panel": 7.13018465390688
+    },
+    "magenta": {
+      "hex": "#db93de",
+      "L": 0.76,
+      "C_requested": 0.13,
+      "C_srgb": 0.12999999999999956,
+      "h": 325.01496746629897,
+      "contrast_panel": 6.810671006042558
+    }
+  },
+  "minimum_selected_syntax_contrast": 4.913797901251115,
+  "method": "Oklab/OKLCH, chroma reduction at fixed L/h into sRGB, then 8-bit rounding; contrast measured after rounding."
+}

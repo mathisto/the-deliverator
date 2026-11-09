@@ -1,0 +1,27 @@
+{
+  "name": "the-deliverator",
+  "displayName": "The Deliverator — Signal study",
+  "description": "A blue-black and charged yellow-green theme. Preview palette; not a stable release.",
+  "version": "0.1.0-dev",
+  "publisher": "mathisto",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mathisto/the-deliverator.git"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "The Deliverator — Signal study",
+        "uiTheme": "vs-dark",
+        "path": "./themes/deliverator-signal-color-theme.json"
+      }
+    ]
+  }
+}

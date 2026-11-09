@@ -1,0 +1,156 @@
+{
+  "name": "The Deliverator — Signal study",
+  "type": "dark",
+  "semanticHighlighting": true,
+  "colors": {
+    "focusBorder": "#d5e500",
+    "foreground": "#e8e9ee",
+    "descriptionForeground": "#a1a4b0",
+    "editor.background": "#171922",
+    "editor.foreground": "#e8e9ee",
+    "editorCursor.foreground": "#d5e500",
+    "editor.selectionBackground": "#d5e50033",
+    "editor.inactiveSelectionBackground": "#2d2f37",
+    "editor.lineHighlightBackground": "#22242c",
+    "editorLineNumber.foreground": "#a1a4b0",
+    "editorLineNumber.activeForeground": "#d5e500",
+    "editorIndentGuide.background1": "#44464d",
+    "editorIndentGuide.activeBackground1": "#a1a4b0",
+    "sideBar.background": "#22242c",
+    "sideBar.foreground": "#e8e9ee",
+    "activityBar.background": "#171922",
+    "activityBar.foreground": "#d5e500",
+    "statusBar.background": "#22242c",
+    "statusBar.foreground": "#e8e9ee",
+    "titleBar.activeBackground": "#22242c",
+    "titleBar.activeForeground": "#e8e9ee",
+    "tab.activeBackground": "#171922",
+    "tab.activeForeground": "#e8e9ee",
+    "tab.inactiveBackground": "#22242c",
+    "tab.inactiveForeground": "#a1a4b0",
+    "panel.background": "#171922",
+    "panel.border": "#44464d",
+    "input.background": "#22242c",
+    "input.foreground": "#e8e9ee",
+    "input.border": "#44464d",
+    "button.background": "#d5e500",
+    "button.foreground": "#171922",
+    "list.activeSelectionBackground": "#2d2f37",
+    "list.activeSelectionForeground": "#e8e9ee",
+    "list.hoverBackground": "#22242c",
+    "terminal.background": "#171922",
+    "terminal.foreground": "#e8e9ee",
+    "editorError.foreground": "#ff7e77",
+    "editorWarning.foreground": "#f1cf44",
+    "editorInfo.foreground": "#5ed1de",
+    "editorHint.foreground": "#6ed274",
+    "terminal.ansiBlack": "#2d2f37",
+    "terminal.ansiRed": "#ff7e77",
+    "terminal.ansiGreen": "#6ed274",
+    "terminal.ansiYellow": "#f1cf44",
+    "terminal.ansiBlue": "#8bafff",
+    "terminal.ansiMagenta": "#db93de",
+    "terminal.ansiCyan": "#5ed1de",
+    "terminal.ansiWhite": "#e8e9ee",
+    "terminal.ansiBrightBlack": "#a1a4b0",
+    "terminal.ansiBrightRed": "#ffa59e",
+    "terminal.ansiBrightGreen": "#90e693",
+    "terminal.ansiBrightYellow": "#ffe890",
+    "terminal.ansiBrightBlue": "#adc7ff",
+    "terminal.ansiBrightMagenta": "#eeadf0",
+    "terminal.ansiBrightCyan": "#86e6f1",
+    "terminal.ansiBrightWhite": "#f8f8fa"
+  },
+  "tokenColors": [
+    {
+      "name": "Comments",
+      "scope": "comment",
+      "settings": {
+        "foreground": "#a1a4b0"
+      }
+    },
+    {
+      "name": "Keywords",
+      "scope": "keyword, storage.type, storage.modifier",
+      "settings": {
+        "foreground": "#d5e500"
+      }
+    },
+    {
+      "name": "Functions",
+      "scope": "entity.name.function, support.function",
+      "settings": {
+        "foreground": "#5ed1de"
+      }
+    },
+    {
+      "name": "Strings",
+      "scope": "string, constant.other.symbol",
+      "settings": {
+        "foreground": "#ffa14c"
+      }
+    },
+    {
+      "name": "Numbers and constants",
+      "scope": "constant.numeric, constant.language",
+      "settings": {
+        "foreground": "#f1cf44"
+      }
+    },
+    {
+      "name": "Types",
+      "scope": "entity.name.type, support.type, support.class",
+      "settings": {
+        "foreground": "#8bafff"
+      }
+    },
+    {
+      "name": "Variables",
+      "scope": "variable",
+      "settings": {
+        "foreground": "#e8e9ee"
+      }
+    },
+    {
+      "name": "Punctuation",
+      "scope": "punctuation",
+      "settings": {
+        "foreground": "#a1a4b0"
+      }
+    },
+    {
+      "name": "Errors",
+      "scope": "invalid",
+      "settings": {
+        "foreground": "#ff7e77"
+      }
+    },
+    {
+      "name": "Inserted",
+      "scope": "markup.inserted",
+      "settings": {
+        "foreground": "#6ed274"
+      }
+    },
+    {
+      "name": "Deleted",
+      "scope": "markup.deleted",
+      "settings": {
+        "foreground": "#ff7e77"
+      }
+    }
+  ],
+  "semanticTokenColors": {
+    "keyword": "#d5e500",
+    "function": "#5ed1de",
+    "method": "#5ed1de",
+    "type": "#8bafff",
+    "class": "#8bafff",
+    "variable": "#e8e9ee",
+    "parameter": "#e8e9ee",
+    "property": "#e8e9ee",
+    "string": "#ffa14c",
+    "number": "#f1cf44",
+    "comment": "#a1a4b0"
+  }
+}
