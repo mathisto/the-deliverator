@@ -49,6 +49,7 @@ class ExportTests(unittest.TestCase):
         item=manifest['contributes']['themes'][0];theme=json.loads((base/item['path']).read_text(encoding='utf-8'))
         self.assertEqual(theme['colors']['editor.background'],self.c['bg'])
         self.assertEqual(theme['colors']['editorCursor.foreground'],self.c['accent'])
+        self.assertEqual(theme['colors']['button.background'],self.c['blue'])
         self.assertEqual(theme['semanticTokenColors']['function'],self.c['cyan'])
         self.assertEqual(theme['semanticTokenColors']['keyword'],self.c[self.doc['semantic_roles']['keyword']])
         self.assertTrue(theme['semanticHighlighting'])
@@ -59,7 +60,7 @@ class ExportTests(unittest.TestCase):
         self.assertEqual(textmate,(ROOT/'ports/bat/Deliverator-Signal.tmTheme').read_bytes())
         data=plistlib.loads(textmate)
         self.assertEqual(data['settings'][0]['settings']['background'],self.c['bg'])
-        self.assertEqual(len(data['settings']),12)
+        self.assertEqual(len(data['settings']),13)
 
     def test_ansi_consistency_across_terminals(self):
         ansi=json.loads((ROOT/'palette/ansi.json').read_text())

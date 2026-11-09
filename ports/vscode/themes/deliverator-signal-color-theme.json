@@ -33,7 +33,7 @@
     "input.background": "#22242c",
     "input.foreground": "#e8e9ee",
     "input.border": "#44464d",
-    "button.background": "#d5e500",
+    "button.background": "#8bafff",
     "button.foreground": "#171922",
     "list.activeSelectionBackground": "#2d2f37",
     "list.activeSelectionForeground": "#e8e9ee",
@@ -81,6 +81,13 @@
       "scope": "entity.name.function, support.function",
       "settings": {
         "foreground": "#5ed1de"
+      }
+    },
+    {
+      "name": "Constructors",
+      "scope": "keyword.operator.new",
+      "settings": {
+        "foreground": "#d5e500"
       }
     },
     {

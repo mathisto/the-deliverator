@@ -64,6 +64,17 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>Constructors</string>
+			<key>scope</key>
+			<string>keyword.operator.new</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d5e500</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>Strings</string>
 			<key>scope</key>
 			<string>string, constant.other.symbol</string>

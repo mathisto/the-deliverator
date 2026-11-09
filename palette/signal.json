@@ -131,6 +131,8 @@
   "semantic_roles": {
     "identity": "accent",
     "focus": "accent",
+    "action": "blue",
+    "constructor": "accent",
     "keyword": "magenta",
     "function": "cyan",
     "literal": "orange"
