@@ -5,6 +5,8 @@
   --dv-control-edge: var(--muted); --dv-focus: var(--accent); --dv-action: var(--accent);
   --dv-action-ink: var(--bg); --dv-danger: var(--red);
   --dv-font: 'DM Sans', system-ui, sans-serif;
+  --dv-heading-font: var(--dv-font); --dv-heading-weight: 500; --dv-heading-tracking: -.025em;
+  --dv-reading-font: var(--dv-font); --dv-reading-size: 16px;
   --dv-code: 'JetBrains Mono', ui-monospace, monospace;
   --dv-control-radius: 8px; --dv-panel-radius: 12px;
   --dv-target: 44px; --dv-gap: 8px; --dv-section-gap: 32px;

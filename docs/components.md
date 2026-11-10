@@ -56,6 +56,8 @@ These are not form-associated custom elements yet: use the internal native contr
 
 `--dv-control-edge` is stronger than the decorative `--dv-rule`. Signal denotes focus, selection and primary action; it is not success/warning. CSS is scoped to library elements/classes and never resets consumer piano keys, canvases or game UI. Components inherit semantic tokens. Future palette adapters map those aliases once rather than adding per-component theme branches.
 
+Exhibit typography has separate heading and reading roles: `--dv-heading-font`, `--dv-heading-weight`, `--dv-heading-tracking`, `--dv-reading-font` and `--dv-reading-size`. Their defaults retain the original appearance. Candidate type studies can exercise those roles without changing the control font or committing a new brand-wide face.
+
 ## Additions and review
 
 1. Identify a repeated intent in real consumers. Keep project-specific simulation out of the library.

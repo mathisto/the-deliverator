@@ -64,9 +64,9 @@ export class DeliveratorExhibit extends LitElement {
   static properties = { heading: {} }; heading = '';
   static styles = css`
     :host { display:block; border:1px solid var(--dv-rule); border-radius:var(--dv-panel-radius); overflow:hidden; background:var(--dv-surface); color:var(--dv-text); }
-    header { padding:20px 24px; border-bottom:1px solid var(--dv-rule); } h2 { margin:0; font:500 24px/1.2 var(--dv-font); letter-spacing:-.025em; }
+    header { padding:20px 24px; border-bottom:1px solid var(--dv-rule); } h2 { margin:0; font:var(--dv-heading-weight) 24px/1.2 var(--dv-heading-font); letter-spacing:var(--dv-heading-tracking); }
     .body { display:grid; grid-template-columns:minmax(0, 1.35fr) minmax(240px, 1fr); }
-    .stage { min-width:0; padding:24px; } aside { min-width:0; padding:24px; border-left:1px solid var(--dv-rule); font:400 16px/1.6 var(--dv-font); }
+    .stage { min-width:0; padding:24px; } aside { min-width:0; padding:24px; border-left:1px solid var(--dv-rule); font:400 var(--dv-reading-size)/1.6 var(--dv-reading-font); }
     @media(max-width:720px) { .body { grid-template-columns:1fr; } aside { border-left:0; border-top:1px solid var(--dv-rule); } header,.stage,aside { padding:18px; } }
   `;
   render() { return html`<article aria-label=${this.heading}><header><h2>${this.heading}</h2></header><div class="body"><div class="stage"><slot name="stage"></slot></div><aside><slot name="context"></slot></aside></div></article>`; }
