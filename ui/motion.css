@@ -1,0 +1,17 @@
+/* Shared feedback grammar. Engine animation belongs to the application. */
+.dv-button {transition:transform var(--dv-press-duration) var(--dv-motion-curve),background-color var(--dv-feedback-duration) ease-out,border-color var(--dv-feedback-duration) ease-out,color var(--dv-ink-duration) ease-out,box-shadow var(--dv-feedback-duration) ease-out}
+.dv-button:active:not(:disabled) {transform:translateY(var(--dv-press-travel)) scale(.985)}
+dv-exhibit {transition:border-color var(--dv-boundary-duration) ease-out}
+dv-exhibit:focus-within {border-color:color-mix(in srgb,var(--dv-focus) 30%,var(--dv-rule))}
+.dv-range input[type=range]::-webkit-slider-thumb {transition:background-color var(--dv-ink-duration) ease-out}
+@media(hover:hover) and (pointer:fine) {
+  .dv-button:hover:not(:disabled) {transform:translateY(var(--dv-hover-travel));box-shadow:0 3px 8px rgb(0 0 0 / .18)}
+  .dv-button:active:not(:disabled) {transform:translateY(var(--dv-press-travel)) scale(.985);box-shadow:0 1px 2px rgb(0 0 0 / .14)}
+}
+@media(prefers-reduced-motion:reduce) {
+  .dv-button,.dv-button:hover:not(:disabled),.dv-button:active:not(:disabled) {transform:none;box-shadow:none;transition:background-color 60ms,border-color 60ms,color 60ms}
+  dv-exhibit {transition:none}
+}
+/* Explicit comparison/consumer opt-out. It never affects a demo's simulation. */
+html[data-motion=off] .dv-button,html[data-motion=off] .dv-button:hover:not(:disabled),html[data-motion=off] .dv-button:active:not(:disabled) {transform:none;box-shadow:none;transition:none}
+html[data-motion=off] dv-exhibit {transition:none}

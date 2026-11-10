@@ -1,3 +1,4 @@
+@import './motion.css';
 /* Only library-owned native controls are styled. Never reset a consumer's game, canvas or piano. */
 dv-button, dv-icon-button { display: inline-block; }
 dv-range { display: block; min-width: 150px; flex: 1; }

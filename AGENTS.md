@@ -9,3 +9,5 @@ The current Signal study is a candidate. Matt chose the blue-black ground and ch
 The public GitHub repository is `mathisto/the-deliverator`; Matt explicitly authorized creating and publishing it. Do not alter the portfolio, Unity HUD or HyperT configuration until Matt accepts the palette and requests or confirms that rollout.
 
 UI icons use Phosphor exclusively; see `docs/icons.md`. Add glyphs to `ui/icon-map.json` and regenerate with `tools/build-icons.mjs`, never draw replacement paths or mix icon families. Regular for general UI, fill for media transport. Link destinations use the app-window symbol, not a diagonal arrow. Shared controls and segmented choices use the same radius token.
+
+The restrained motion grammar is accepted and on by default. Read `docs/motion.md`; use shared motion tokens/rules instead of per-component timing inventions. Respect reduced motion, avoid layout movement and default bounce, and keep UI feedback separate from project simulations.

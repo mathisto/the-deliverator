@@ -52,6 +52,8 @@ views.addEventListener('dv-change', event => app.setView(event.detail.value));
 
 Component implementations own markup, styles and UI state. Consumers own engine state. The controls render in light DOM so native labels, ordinary event listeners and existing engine integrations work without a framework adapter. `nativeControl` exposes the actual button/input after `updateComplete`; do not depend on incidental descendants. The first portfolio bridge uses this escape hatch while the old engines still own their control state. New integrations should update component properties.
 
+The accepted [motion grammar](motion.md) is on by default through `ui/controls.css`. Consumers copying the CSS directly must keep `ui/motion.css` beside it; bundled consumers resolve the import at build time. Use its shared timing and travel tokens for new components.
+
 These are not form-associated custom elements yet: use the internal native control deliberately if needed; do not assume setting a custom-element `name` creates a submitted value. Action buttons always use `type="button"`. Choice groups use independently focusable native toggle buttons, not custom radios or a roving Tab model. `aria-pressed` carries selection; a rounded border, surface and color reinforce it. A visible label is mandatory. Icon-only actions are not the default for unfamiliar choices.
 
 `--dv-control-edge` is stronger than the decorative `--dv-rule`. Signal denotes focus, selection and primary action; it is not success/warning. CSS is scoped to library elements/classes and never resets consumer piano keys, canvases or game UI. Components inherit semantic tokens. Future palette adapters map those aliases once rather than adding per-component theme branches.

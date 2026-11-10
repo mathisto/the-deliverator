@@ -10,5 +10,7 @@
   --dv-code: 'JetBrains Mono', ui-monospace, monospace;
   --dv-control-radius: 8px; --dv-panel-radius: 12px;
   --dv-target: 44px; --dv-gap: 8px; --dv-section-gap: 32px;
+  --dv-press-duration:100ms; --dv-feedback-duration:150ms; --dv-ink-duration:120ms; --dv-boundary-duration:180ms;
+  --dv-motion-curve:cubic-bezier(.2,0,.38,.9); --dv-hover-travel:-1px; --dv-press-travel:1px;
   color-scheme: dark;
 }
