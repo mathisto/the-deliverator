@@ -16,3 +16,6 @@
   --dv-motion-curve:cubic-bezier(.2,0,.38,.9); --dv-hover-travel:-1px; --dv-press-travel:1px;
   color-scheme: dark;
 }
+
+/* Syntax belongs to the selected palette, including embedded code studies. */
+:root{--dv-syntax-text:var(--fg);--dv-syntax-comment:var(--muted);--dv-syntax-number:var(--orange);--dv-syntax-call:var(--cyan);--dv-syntax-symbol:var(--yellow);--dv-syntax-keyword:var(--magenta);--dv-code-surface:var(--bg-alt)}

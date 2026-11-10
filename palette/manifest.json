@@ -1,7 +1,7 @@
 {
   "status": "preview",
   "files": {
-    "README.md": "85b6b9cec9c7a3a988e35acbfb140d389d71843ad83fd76492e55d5a61c1290a",
+    "README.md": "5b3741cdfd8ead7a3fb3772bbb07e6f4f0537a205beac6b70b1ab6049918e8bb",
     "assets/color-chips/accent.svg": "7ea1eb5d88da182a0e8d23856c1a6d8a976bd985306a173dd40653dbc1298ebd",
     "assets/color-chips/bg-alt.svg": "52ed61d17ab3cf5a98cf8a9a7a40d2952a3d398963dcd82769be30f2cc42cfa4",
     "assets/color-chips/bg-hl.svg": "4d9572158e4390ddfdaf57aff4c76c7da551aac8e5de36ce874f070a1373e52f",
@@ -28,6 +28,7 @@
     "ports/kitty/deliverator-signal.conf": "db01505cdd32df713ac32a1db6ae47490dcbdb54a6c03043d832f23df28d924a",
     "ports/neovim/colors/deliverator-signal.lua": "72380a62bbf52888b2cefb770c5d67611b740f673d9989fdb4fbfe39e105562e",
     "ports/textmate/Deliverator-Signal.tmTheme": "b2f2dcf5091532d0e4a8b3fa373f7f3d844f5b30bb9f059f8d65f75a3f46cf0d",
+    "ports/unity/deliverator.toml": "b56bd8de9f33c1834d5697e4deece94e2ee06e3adafa47d6c0393d6e623a23a1",
     "ports/vscode/package.json": "e18d7b878a1241017b62602a2512bdf0ce0f506d3b5d022b0bdc8b572f368f10",
     "ports/vscode/themes/deliverator-signal-color-theme.json": "fc4b39377c3a08f1dfacbbb3406a795105498a635e975bcb79024151b1cd26ab",
     "ports/wezterm/deliverator-signal.toml": "28757fe6fa7f7c23ac91e3eb912df6ec9f1adfa2bc66467b6c2221702b556a83",

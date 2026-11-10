@@ -31,3 +31,5 @@ dv-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: var(--dv-
 .dv-range input[type=range]::-moz-range-progress { height:3px; background:var(--dv-action); }
 .dv-range input[type=range]::-moz-range-thumb { width:12px; height:12px; border:2px solid var(--dv-action); border-radius:50%; background:var(--dv-surface); }
 @media (forced-colors: active) { .dv-button[aria-pressed=true] { outline: 2px solid Highlight; } }
+
+.dv-project-title a{color:var(--dv-text);text-decoration:none}.dv-project-title a:hover{color:var(--dv-action)}.dv-project-title a:focus-visible{outline:2px solid var(--dv-focus);outline-offset:4px}

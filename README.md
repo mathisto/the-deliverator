@@ -52,6 +52,7 @@ Every swatch and value below comes from the same palette generator as the applic
 | --- | --- |
 | VS Code | [Theme extension](ports/vscode/README.md) |
 | Neovim | [Colorscheme](ports/neovim/README.md) |
+| Unity / Hyper+T | [Desktop palette](ports/unity/README.md) |
 | Windows Terminal | [Scheme](ports/windows-terminal/README.md) |
 | Alacritty · Kitty · WezTerm | [Alacritty](ports/alacritty/README.md) · [Kitty](ports/kitty/README.md) · [WezTerm](ports/wezterm/README.md) |
 | TextMate · bat | [TextMate](ports/textmate/README.md) · [bat](ports/bat/README.md) |

@@ -155,6 +155,7 @@ def outputs():
 <text x="39" y="218" font-family="sans-serif" font-size="25" fill="{c['accent']}">Blue-black. Charged signal.</text>
 <text x="1163" y="266" text-anchor="end" font-family="monospace" font-size="14" fill="{c['muted']}">SIGNAL STUDY / PREVIEW</text>
 </svg>\n'''
+    out['ports/unity/deliverator.toml']='family = \"The Deliverator\"\nvariant = \"\"\n\n# Generated from the canonical palette; Unity supports these thirteen roles.\n[colors]\n'+''.join(k.replace('-', '_')+' = '+json.dumps(v)+'\n' for k,v in c.items() if k != 'line')
     out.update(color_reference.outputs(doc, ROOT))
     serialized={k:(v if isinstance(v,bytes) else v.encode('utf-8')) for k,v in out.items()}
     serialized['palette/manifest.json']=json_text({'status':'preview','files':{k:hashlib.sha256(v).hexdigest() for k,v in sorted(serialized.items())}}).encode()

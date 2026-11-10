@@ -1,0 +1,18 @@
+family = "The Deliverator"
+variant = ""
+
+# Generated from the canonical palette; Unity supports these thirteen roles.
+[colors]
+bg = "#171922"
+bg_alt = "#22242c"
+bg_hl = "#2d2f37"
+fg = "#e8e9ee"
+muted = "#a1a4b0"
+accent = "#d5e500"
+red = "#ff7e77"
+orange = "#ffa14c"
+yellow = "#f1cf44"
+green = "#6ed274"
+cyan = "#5ed1de"
+blue = "#8bafff"
+magenta = "#db93de"

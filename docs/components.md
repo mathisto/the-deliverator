@@ -32,7 +32,7 @@ Load generated `palette/signal.css`, `ui/tokens.css`, `ui/controls.css`, optiona
 | `dv-choice-group` | `label`, `value`, `options: {value,label,icon?}[]`, `disabled`, optional `icon-only`; emits bubbling `dv-change` with `detail.value` | Apply the selection to application state; set `value` for external state changes. |
 | `dv-range` | `label`, `value`, `min`, `max`, `step`, `format="percent\|number"`, `disabled`, `control-id` | Handle native `input`; choose the domain and units. Percent displays value × 100. |
 | `dv-toolbar` | Required `label`; wrapping native control group | Group related controls. This is not an ARIA toolbar and does not add arrow navigation. |
-| `dv-exhibit` | Required `heading`; `stage`, `context` and optional `heading` slots | Supply the actual project, explanation and destination. Do not duplicate the same preview on both sides. |
+| `dv-exhibit` | Required `heading`; `stage`, `context` and optional `heading` slots. `source-url` and optional `source-label` create the shared top-right GitHub action. Omit source properties when no public source is available, including closed-source products | Supply the actual project, explanation and destination. Do not duplicate the same preview on both sides. |
 
 Iconography follows the [Phosphor contract](icons.md). Add new glyphs through the shared subset manifest; do not author another SVG path or mix icon families. The catalogue includes an Icons story.
 
@@ -79,3 +79,5 @@ Sources: [Lit](https://lit.dev/docs/), [Storybook Web Components + Vite](https:/
 ## Existing applications
 
 [Consumer integration](adoption.md) describes the revision-pinned web export and the native-markup adapter. Use the adapter to preserve existing behavior during migration, then replace repeated UI with first-class components as each real interaction is validated. The adapter is a bridge, not evidence that an application is fully migrated.
+
+Exhibit headings do not need a separator rule. Project-title links use the shared app-window icon and no persistent underline. Source actions are owned by `dv-exhibit`, not manually repeated inside the heading slot. Do not link a private repository as though it were publicly available.

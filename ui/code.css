@@ -1,0 +1,8 @@
+/* Code-study surface: syntax roles follow the selected document palette. */
+.dv-code{background:var(--dv-code-surface);color:var(--dv-syntax-text)}
+.dv-code pre{background:var(--dv-code-surface);color:var(--dv-syntax-text);font-family:var(--dv-code);scrollbar-color:var(--dv-secondary) var(--dv-code-surface)}
+.dv-code .tok-comment{color:var(--dv-syntax-comment)}
+.dv-code .tok-number{color:var(--dv-syntax-number)}
+.dv-code .tok-call{color:var(--dv-syntax-call)}
+.dv-code .tok-phase{color:var(--dv-syntax-symbol);background:color-mix(in srgb,var(--dv-syntax-symbol) 8%,transparent)}
+.dv-code .tok-keyword{color:var(--dv-syntax-keyword)}

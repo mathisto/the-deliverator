@@ -61,15 +61,16 @@ export class DeliveratorToolbar extends LitElement {
   render() { return nothing; }
 }
 export class DeliveratorExhibit extends LitElement {
-  static properties = { heading: {} }; heading = '';
+  static properties = { heading: {}, sourceUrl: {attribute:'source-url'}, sourceLabel: {attribute:'source-label'} };
+  heading = ''; sourceUrl = ''; sourceLabel = '';
   static styles = css`
     :host { display:block; border:1px solid var(--dv-rule); border-radius:var(--dv-panel-radius); overflow:hidden; background:var(--dv-surface); color:var(--dv-text); }
-    header { padding:20px 24px; border-bottom:1px solid var(--dv-rule); } h2 { margin:0; font:var(--dv-heading-weight) 24px/1.2 var(--dv-heading-font); letter-spacing:var(--dv-heading-tracking); }
+    header { display:flex;align-items:center;gap:16px;padding:20px 24px; } .heading {flex:1;min-width:0} .source {display:inline-flex;align-items:center;justify-content:center;flex:none;min-width:44px;min-height:44px;border-radius:var(--dv-control-radius);color:var(--dv-text)} .source svg{width:24px;height:24px;fill:currentColor}.source:hover{background:var(--dv-hover);color:var(--dv-action)}.source:focus-visible{outline:2px solid var(--dv-focus);outline-offset:3px}.unavailable{color:var(--dv-secondary);opacity:.5} h2 { margin:0; font:var(--dv-heading-weight) 24px/1.2 var(--dv-heading-font); letter-spacing:var(--dv-heading-tracking); }
     .body { display:grid; grid-template-columns:minmax(0, 1.35fr) minmax(240px, 1fr); }
     .stage { min-width:0; padding:24px; } aside { min-width:0; padding:24px; border-left:1px solid var(--dv-rule); font:400 var(--dv-reading-size)/1.6 var(--dv-reading-font); }
     @media(max-width:720px) { .body { grid-template-columns:1fr; } aside { border-left:0; border-top:1px solid var(--dv-rule); } header,.stage,aside { padding:18px; } }
   `;
-  render() { return html`<article aria-label=${this.heading}><header><slot name="heading"><h2>${this.heading}</h2></slot></header><div class="body"><div class="stage"><slot name="stage"></slot></div><aside><slot name="context"></slot></aside></div></article>`; }
+  render() { return html`<article aria-label=${this.heading}><header><div class="heading"><slot name="heading"><h2>${this.heading}</h2></slot></div>${this.sourceUrl ? html`<a class="source" href=${this.sourceUrl} target="_blank" rel="noopener" aria-label=${this.sourceLabel || `${this.heading} on GitHub`} title=${this.sourceLabel || `${this.heading} on GitHub`}>${unsafeSVG(iconMarkup('github'))}</a>` : nothing}</header><div class="body"><div class="stage"><slot name="stage"></slot></div><aside><slot name="context"></slot></aside></div></article>`; }
 }
 for (const [name, ctor] of Object.entries({ 'dv-button': DeliveratorButton, 'dv-icon-button': DeliveratorIconButton, 'dv-choice-group': DeliveratorChoiceGroup, 'dv-range': DeliveratorRange, 'dv-toolbar': DeliveratorToolbar, 'dv-exhibit': DeliveratorExhibit })) {
   if (!customElements.get(name)) customElements.define(name, ctor);
