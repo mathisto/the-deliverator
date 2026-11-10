@@ -102,7 +102,7 @@ def build():
     assert min(token_ratios)>=4.5, min(token_ratios)
     document={
       'id':'deliverator-signal','name':'Deliverator · Signal study',
-      'status':'candidate; yellow-green direction selected by Matt; full palette pending review',
+      'status':'accepted for first-party web UI; editor and terminal ports remain preview',
       'ground':{'hex':GROUND,'L':L,'C':C,'h':h},
       'signal_hue':signal,'tokens':colors,'derivation':records,
       'semantic_roles':{'identity':'accent','focus':'accent','action':'blue','constructor':'accent','keyword':'magenta','function':'cyan','literal':'orange'},

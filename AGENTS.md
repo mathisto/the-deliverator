@@ -4,7 +4,7 @@ This public repository owns the generative palette and application exports. Keep
 
 For component/design work, start at `docs/agent-entry.md` and `docs/design-system.md`. The reusable workflow is maintained in `skills/deliverator-ui/SKILL.md`; its presence here is not evidence of a global installation.
 
-The current Signal study is a candidate. Matt chose the blue-black ground and charged yellow-green direction; the complete palette has not been accepted as final. Do not claim a stable release, marketplace publication, installed application support, or a completed desktop migration without evidence.
+Matt accepted the current Signal appearance for his first-party web interfaces and requested rollout. Do not claim a stable release, marketplace publication, installed application support, or a completed desktop migration without evidence.
 
 `tools/color.py` is the source of truth. Change the recipe, run `python tools/build.py`, then `python tools/build.py --check` and `python -m unittest discover -s tests -v`. Never hand-edit generated palette, port, or swatch files. Keep import instructions beside ports. Clearly separate format validation, actual application loading, and subjective acceptance.
 

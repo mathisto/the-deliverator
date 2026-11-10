@@ -1,43 +1,66 @@
-<p align="center"><img src="assets/header.svg" alt="The Deliverator. Blue-black. Charged signal. Signal study." width="100%"></p>
+# The Deliverator
 
-<p align="center"><a href="#try-it">Try it</a> · <a href="#ports">Ports</a> · <a href="docs/palette.md">The recipe</a> · <a href="docs/porting.md">Make a port</a></p>
+A design language for the things I make: dark surfaces, charged color, readable type, and controls that respond quietly.
 
-A dark color system built around a blue-black ground and one charged yellow-green signal. Inspired by the night courier, engineered materials and electrical urgency of Neal Stephenson’s *Snow Crash*.
+[See it in the workshop](https://mattkelly.io/) · [Use the library](docs/components.md) · [Style guide](docs/design-system.md) · [Agent workflow](docs/agent-entry.md)
 
-**Signal study is a preview.** The ground and accent direction are chosen; the complete palette is still being refined. Generated ports are available to try, but this is not a stable release or a published editor-marketplace extension.
+![The Deliverator palette, generated from the canonical color recipe](assets/palette.svg)
 
-![Signal study palette](assets/palette.svg)
+Iosevka Etoile for headings. Aile for reading and controls. Iosevka Mono for code and breadcrumbs. Phosphor icons throughout, with restrained motion and a reduced-motion path.
 
-## Try it
+The web identity is accepted; the component library is growing as real projects adopt it. The npm package is unpublished, and editor/terminal ports remain previews. [What is verified](docs/verification.md).
 
-The component library is taking shape alongside the palette. Start with the **[design-system guide](docs/design-system.md)**, then the [component contracts and catalogue](docs/components.md). The [agent entry point](docs/agent-entry.md) keeps implementation guidance in one place. This is an unpublished reference slice, not a stable UI kit.
+## Use it
 
-**[Open the live Lisp theme study](https://lisp.mattkelly.io/?theme=deliverator-signal).** Use its palette menu to compare the original Deliverator and other themes. The candidate does not overwrite a saved theme choice.
+```sh
+npm ci
+npm run check
+npm run build
+npm run storybook
+```
 
-Or choose an application below. Nothing in this repository changes your configuration automatically.
+[Integrate a revision-pinned web export](docs/adoption.md). Compose the shared controls and exhibit rows; keep application state and engines in the application. [Component contracts](docs/components.md) · [Typography](docs/typography.md) · [Icons](docs/icons.md) · [Motion](docs/motion.md).
 
-## Ports
+## Colors
 
-| Application | Import | Instructions |
-| --- | --- | --- |
-| Neovim | [Lua colorscheme](ports/neovim/colors/deliverator-signal.lua) | [Setup](ports/neovim/README.md) |
-| VS Code | [Theme extension](ports/vscode/) | [Preview locally](ports/vscode/README.md) |
-| TextMate | [`.tmTheme`](ports/textmate/Deliverator-Signal.tmTheme) | [Import](ports/textmate/README.md) |
-| bat | [`.tmTheme`](ports/bat/Deliverator-Signal.tmTheme) | [Cache and select](ports/bat/README.md) |
-| Windows Terminal | [Scheme JSON](ports/windows-terminal/deliverator-signal.json) | [Add a scheme](ports/windows-terminal/README.md) |
-| Alacritty | [Color TOML](ports/alacritty/deliverator-signal.toml) | [Import](ports/alacritty/README.md) |
-| Kitty | [Theme configuration](ports/kitty/deliverator-signal.conf) | [Include](ports/kitty/README.md) |
-| WezTerm | [Color scheme TOML](ports/wezterm/deliverator-signal.toml) | [Load](ports/wezterm/README.md) |
+Every swatch and value below comes from the same palette generator as the application ports. RGB uses 0-255 channels; OKLCH uses lightness percent, chroma, and hue degrees. Contrast is measured against the ground, not a blanket text-accessibility rating.
 
-All are preview ports. [Validation status](docs/verification.md) distinguishes format checks, application smoke tests and visual acceptance.
+<!-- colors:start -->
+| Role | Hex | RGB · 0–255 | OKLCH · L C h | Contrast / ground |
+| --- | --- | --- | --- | --- |
+| <img src="assets/color-chips/bg.svg" width="18" height="18" alt=""> `bg` | `#171922` | `23, 25, 34` | `21.55% 0.0180 275.01` | 1.00:1 |
+| <img src="assets/color-chips/bg-alt.svg" width="18" height="18" alt=""> `bg-alt` | `#22242C` | `34, 36, 44` | `26.17% 0.0152 274.24` | 1.13:1 |
+| <img src="assets/color-chips/bg-hl.svg" width="18" height="18" alt=""> `bg-hl` | `#2D2F37` | `45, 47, 55` | `30.65% 0.0146 274.40` | 1.31:1 |
+| <img src="assets/color-chips/line.svg" width="18" height="18" alt=""> `line` | `#44464D` | `68, 70, 77` | `39.49% 0.0120 273.11` | 1.86:1 |
+| <img src="assets/color-chips/fg.svg" width="18" height="18" alt=""> `fg` | `#E8E9EE` | `232, 233, 238` | `93.47% 0.0068 277.16` | 14.45:1 |
+| <img src="assets/color-chips/muted.svg" width="18" height="18" alt=""> `muted` | `#A1A4B0` | `161, 164, 176` | `72.01% 0.0176 274.72` | 7.05:1 |
+| <img src="assets/color-chips/accent.svg" width="18" height="18" alt=""> `accent` | `#D5E500` | `213, 229, 0` | `87.97% 0.1990 114.78` | 12.55:1 |
+| <img src="assets/color-chips/red.svg" width="18" height="18" alt=""> `red` | `#FF7E77` | `255, 126, 119` | `73.97% 0.1585 24.83` | 7.09:1 |
+| <img src="assets/color-chips/orange.svg" width="18" height="18" alt=""> `orange` | `#FFA14C` | `255, 161, 76` | `78.93% 0.1488 59.83` | 8.72:1 |
+| <img src="assets/color-chips/yellow.svg" width="18" height="18" alt=""> `yellow` | `#F1CF44` | `241, 207, 68` | `85.99% 0.1549 94.90` | 11.47:1 |
+| <img src="assets/color-chips/green.svg" width="18" height="18" alt=""> `green` | `#6ED274` | `110, 210, 116` | `78.06% 0.1608 145.05` | 9.29:1 |
+| <img src="assets/color-chips/cyan.svg" width="18" height="18" alt=""> `cyan` | `#5ED1DE` | `94, 209, 222` | `79.95% 0.1049 205.39` | 9.72:1 |
+| <img src="assets/color-chips/blue.svg" width="18" height="18" alt=""> `blue` | `#8BAFFF` | `139, 175, 255` | `75.96% 0.1223 265.13` | 8.07:1 |
+| <img src="assets/color-chips/magenta.svg" width="18" height="18" alt=""> `magenta` | `#DB93DE` | `219, 147, 222` | `75.97% 0.1303 325.39` | 7.71:1 |
+<!-- colors:end -->
 
-For your own tools: **[JSON](palette/signal.json)** · **[CSS](palette/signal.css)** · **[13-role TOML](palette/signal.toml)** · **[ANSI 16](palette/ansi.json)**.
+[Full copyable CSS reference, including HSL](docs/colors.md) · [CSS variables](palette/signal.css) · [JSON](palette/signal.json) · [The color recipe](docs/palette.md).
 
-## One palette, an explicit recipe
+## Bring it to your tools
 
-The only retained RGB input is `#171922`. Its OKLCH hue determines a complementary signal rotated 20° toward green. Surface levels follow fixed lightness steps; supporting inks follow named hue offsets and chroma budgets. Every export comes from that recipe.
+| Tool | Import / setup |
+| --- | --- |
+| VS Code | [Theme extension](ports/vscode/README.md) |
+| Neovim | [Colorscheme](ports/neovim/README.md) |
+| Windows Terminal | [Scheme](ports/windows-terminal/README.md) |
+| Alacritty · Kitty · WezTerm | [Alacritty](ports/alacritty/README.md) · [Kitty](ports/kitty/README.md) · [WezTerm](ports/wezterm/README.md) |
+| TextMate · bat | [TextMate](ports/textmate/README.md) · [bat](ports/bat/README.md) |
 
-The result is reproducible, not mathematically ordained. We choose the character; the generator keeps the relationships consistent, reduces chroma to fit sRGB, and checks contrast after rounding. [Read the derivation](docs/palette.md).
+Ports are importable previews; installation and application loading are tracked separately. [Make a port](docs/porting.md).
+
+## Work on the system
+
+Change the recipe or component source, then regenerate and validate. The README lookup table, swatches, palette and ports are generated together.
 
 ```sh
 python tools/build.py
@@ -45,10 +68,8 @@ python tools/build.py --check
 python -m unittest discover -s tests -v
 ```
 
-Python 3.11 or newer; no third-party Python packages. Generated files and their hashes are committed. CI checks drift and runs isolated Neovim and bat smoke tests.
+[Usage grammar](docs/semantics.md) · [Writing](docs/voice.md) · [Next components](docs/design-system.md#next-components-in-order).
 
-## Contributing
+MIT for the library; bundled Iosevka fonts retain their OFL license and Phosphor its MIT notice. [License](LICENSE) · [Font provenance](assets/fonts/iosevka-source.json).
 
-Discuss a palette change before changing exports. For a new application, map semantic roles, add a generator and import instructions, and document how it was tested. [Porting guide](docs/porting.md) · [Design research](docs/research.md) · [Next work](docs/roadmap.md).
-
-MIT licensed. *Snow Crash* is an inspiration, not an affiliation or endorsement. No artwork, logos or palette files from the reference theme projects are redistributed here.
+Built by [Matt Kelly](https://mattkelly.io/).

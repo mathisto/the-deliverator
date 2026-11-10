@@ -1,7 +1,7 @@
 {
   "id": "deliverator-signal",
   "name": "Deliverator · Signal study",
-  "status": "candidate; yellow-green direction selected by Matt; full palette pending review",
+  "status": "accepted for first-party web UI; editor and terminal ports remain preview",
   "ground": {
     "hex": "#171922",
     "L": 0.21554316135260027,

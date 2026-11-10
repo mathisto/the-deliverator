@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
 <title id="title">The Deliverator — Signal study palette</title>
-<desc id="desc">Generated color roles on the retained blue-black ground. Candidate palette, not a stable release.</desc>
+<desc id="desc">Generated canonical color roles on the blue-black ground. Accepted first-party web palette; component API and editor ports remain previews.</desc>
 <rect width="1200" height="360" fill="#171922"/>
 <rect x="30" y="28" width="145" height="88" rx="5" fill="#171922"/>
 <text x="30" y="140" font-family="monospace" font-size="16" fill="#e8e9ee">bg</text>

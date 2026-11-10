@@ -69,7 +69,7 @@ export class DeliveratorExhibit extends LitElement {
     .stage { min-width:0; padding:24px; } aside { min-width:0; padding:24px; border-left:1px solid var(--dv-rule); font:400 var(--dv-reading-size)/1.6 var(--dv-reading-font); }
     @media(max-width:720px) { .body { grid-template-columns:1fr; } aside { border-left:0; border-top:1px solid var(--dv-rule); } header,.stage,aside { padding:18px; } }
   `;
-  render() { return html`<article aria-label=${this.heading}><header><h2>${this.heading}</h2></header><div class="body"><div class="stage"><slot name="stage"></slot></div><aside><slot name="context"></slot></aside></div></article>`; }
+  render() { return html`<article aria-label=${this.heading}><header><slot name="heading"><h2>${this.heading}</h2></slot></header><div class="body"><div class="stage"><slot name="stage"></slot></div><aside><slot name="context"></slot></aside></div></article>`; }
 }
 for (const [name, ctor] of Object.entries({ 'dv-button': DeliveratorButton, 'dv-icon-button': DeliveratorIconButton, 'dv-choice-group': DeliveratorChoiceGroup, 'dv-range': DeliveratorRange, 'dv-toolbar': DeliveratorToolbar, 'dv-exhibit': DeliveratorExhibit })) {
   if (!customElements.get(name)) customElements.define(name, ctor);

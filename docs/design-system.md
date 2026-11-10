@@ -9,7 +9,7 @@ Build Matt Kelly's first-party interfaces from a shared vocabulary, with the rea
 - [Motion](motion.md): restrained feedback on by default, with reduced-motion support.
 - [Component contracts](components.md): existing controls and exhibit composition, native semantics, 44px minimum targets, shared rounded control geometry.
 
-The complete Signal palette remains a candidate; acceptance of fonts, icons and motion does not make every color or terminal port final. Generated colors remain owned by the palette recipe. The package is still an unpublished reference implementation, not a finished UI framework.
+Matt has accepted the current Signal appearance for first-party web UI and requested rollout. Editor and terminal port loading remains independently verified. Generated colors remain owned by the palette recipe. The package is still an unpublished reference implementation, not a finished UI framework.
 
 ## How to use it
 

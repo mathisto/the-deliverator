@@ -6,6 +6,7 @@ import html
 import json
 import plistlib
 import uuid
+import color_reference
 
 from color import build, generate, to_oklch
 
@@ -138,7 +139,7 @@ def outputs():
 
     swatches=['<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">',
       '<title id="title">The Deliverator — Signal study palette</title>',
-      '<desc id="desc">Generated color roles on the retained blue-black ground. Candidate palette, not a stable release.</desc>',
+      '<desc id="desc">Generated canonical color roles on the blue-black ground. Accepted first-party web palette; component API and editor ports remain previews.</desc>',
       f'<rect width="1200" height="360" fill="{c["bg"]}"/>']
     for i,(name,value) in enumerate(c.items()):
         x=30+(i%7)*167;y=28+(i//7)*168
@@ -154,6 +155,7 @@ def outputs():
 <text x="39" y="218" font-family="sans-serif" font-size="25" fill="{c['accent']}">Blue-black. Charged signal.</text>
 <text x="1163" y="266" text-anchor="end" font-family="monospace" font-size="14" fill="{c['muted']}">SIGNAL STUDY / PREVIEW</text>
 </svg>\n'''
+    out.update(color_reference.outputs(doc, ROOT))
     serialized={k:(v if isinstance(v,bytes) else v.encode('utf-8')) for k,v in out.items()}
     serialized['palette/manifest.json']=json_text({'status':'preview','files':{k:hashlib.sha256(v).hexdigest() for k,v in sorted(serialized.items())}}).encode()
     return serialized

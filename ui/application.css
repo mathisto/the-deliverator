@@ -1,0 +1,13 @@
+/* Native application adapter for existing HTML/React/Svelte hosts.
+   New UI should compose components; this preserves existing application behavior.
+   Mark original artwork/notation/keyboard regions with data-dv-preserve. */
+:root[data-deliverator]{--code-font:var(--dv-code);--ui:var(--dv-font);--display:var(--dv-heading-font)}
+[data-deliverator] body{font-family:var(--dv-reading-font);background:var(--bg);color:var(--fg)}
+[data-deliverator] :is(h1,h2,h3):not([data-dv-preserve] *){font-family:var(--dv-heading-font)!important;font-weight:400}
+[data-deliverator] :is(pre,code,kbd,samp,textarea.code):not([data-dv-preserve] *){font-family:var(--dv-code)!important}
+[data-deliverator] :is(input,select,textarea,button):not([data-dv-preserve] *){font-family:var(--dv-font)!important}
+[data-deliverator] button.dv-button:not([data-dv-preserve] *){border-radius:var(--dv-control-radius);font-weight:400;min-height:44px;min-width:44px;background:var(--dv-raised);color:var(--dv-text);border:1px solid transparent}
+[data-deliverator] button.dv-button[aria-pressed=true]:not([data-dv-preserve] *){border-color:var(--dv-action);background:var(--dv-hover);color:var(--dv-action)}
+[data-deliverator] button.dv-button:hover:not(:disabled):not([data-dv-preserve] *){background:var(--dv-hover)}
+[data-deliverator] :is(a,summary,input,select,textarea):focus-visible{outline:2px solid var(--dv-focus);outline-offset:3px}
+[data-deliverator] .dv-code-label{font-family:var(--dv-breadcrumb-font)}

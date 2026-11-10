@@ -11,5 +11,10 @@
   "palette": "regular/palette.svg",
   "open-project": "regular/app-window.svg",
   "back-to-top": "regular/caret-up.svg",
-  "close": "regular/x.svg"
+  "close": "regular/x.svg",
+  "arrow-right": "regular/arrow-right.svg",
+  "arrow-left": "regular/arrow-left.svg",
+  "chevron-down": "regular/caret-down.svg",
+  "layers-2": "regular/stack.svg",
+  "plus": "regular/plus.svg"
 }
