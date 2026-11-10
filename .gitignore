@@ -3,3 +3,6 @@ __pycache__/
 .local/
 .venv/
 *.vsix
+node_modules/
+dist/
+storybook-static/
