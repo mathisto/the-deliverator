@@ -1,4 +1,8 @@
-/* Optional study typography. Font choice is still a candidate; files carry their licenses. */
+/* Accepted typography. Self-host these faces with their OFL notice. */
+@font-face { font-family:'Iosevka'; font-style:normal; font-weight:400; font-display:swap; src:url('../assets/fonts/iosevka.woff2') format('woff2'); }
+@font-face { font-family:'Iosevka Aile'; font-style:normal; font-weight:400; font-display:swap; src:url('../assets/fonts/iosevkaaile.woff2') format('woff2'); }
+@font-face { font-family:'Iosevka Etoile'; font-style:normal; font-weight:400; font-display:swap; src:url('../assets/fonts/iosevkaetoile.woff2') format('woff2'); }
+/* Retained comparison faces. They are not loaded unless used. */
 @font-face { font-family:'DM Sans'; font-style:normal; font-weight:400; font-display:swap; src:url('../assets/fonts/dm-sans-400.ttf') format('truetype'); }
 @font-face { font-family:'DM Sans'; font-style:normal; font-weight:500; font-display:swap; src:url('../assets/fonts/dm-sans-500.ttf') format('truetype'); }
 @font-face { font-family:'JetBrains Mono'; font-style:normal; font-weight:400; font-display:swap; src:url('../assets/fonts/jetbrains-mono-400.ttf') format('truetype'); }

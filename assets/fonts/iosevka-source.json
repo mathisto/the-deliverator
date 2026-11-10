@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/be5invis/Iosevka",
+  "release": "v34.9.1",
+  "license": "https://raw.githubusercontent.com/be5invis/Iosevka/v34.9.1/LICENSE.md",
+  "files": {
+    "iosevka.woff2": "6ee346f7217be478ae535e7bfb025aec835e30c663d0f1525969cb0947f663fa",
+    "iosevkaaile.woff2": "8143f34862f0053005229fdb6b00273092431e7b4bd50a2454570ce379d16f1c",
+    "iosevkaetoile.woff2": "8cfb9eb8cf4b63d1db927ca4b2053268e761ea80a304637199d6a92c44db10c7"
+  }
+}

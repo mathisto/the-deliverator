@@ -11,3 +11,5 @@ The public GitHub repository is `mathisto/the-deliverator`; Matt explicitly auth
 UI icons use Phosphor exclusively; see `docs/icons.md`. Add glyphs to `ui/icon-map.json` and regenerate with `tools/build-icons.mjs`, never draw replacement paths or mix icon families. Regular for general UI, fill for media transport. Link destinations use the app-window symbol, not a diagonal arrow. Shared controls and segmented choices use the same radius token.
 
 The restrained motion grammar is accepted and on by default. Read `docs/motion.md`; use shared motion tokens/rules instead of per-component timing inventions. Respect reduced motion, avoid layout movement and default bounce, and keep UI feedback separate from project simulations.
+
+Typography is accepted: Iosevka Etoile headings, Iosevka Aile reading and controls, Iosevka Mono breadcrumbs and code. Read `docs/typography.md`; use the semantic role tokens and bundled font declarations. Do not silently replace these with JetBrains, Fira or another family.

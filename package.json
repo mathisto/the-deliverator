@@ -7,7 +7,9 @@
   "exports": {
     ".": "./dist/deliverator.js",
     "./controls.css": "./ui/controls.css",
-    "./tokens.css": "./ui/tokens.css"
+    "./tokens.css": "./ui/tokens.css",
+    "./fonts.css": "./ui/fonts.css",
+    "./motion.css": "./ui/motion.css"
   },
   "scripts": {
     "build": "node tools/build-icons.mjs && vite build && node tools/build-icons.mjs",

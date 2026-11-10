@@ -4,7 +4,7 @@ dv-button, dv-icon-button { display: inline-block; }
 dv-range { display: block; min-width: 150px; flex: 1; }
 dv-choice-group { display: inline-block; max-width: 100%; }
 dv-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: var(--dv-gap); }
-.dv-button, .dv-range, .dv-choices { font: 500 14px/1.3 var(--dv-font); color: var(--dv-text); }
+.dv-button, .dv-range, .dv-choices { font: var(--dv-control-font-weight) var(--dv-control-font-size)/1.3 var(--dv-font); color: var(--dv-text); }
 .dv-button { box-sizing: border-box; display: inline-flex; justify-content: center; align-items: center; gap: 8px; min-height: var(--dv-target); min-width: var(--dv-target); padding: 9px 13px; border: 1px solid transparent; border-radius: var(--dv-control-radius); background: var(--dv-raised); color: var(--dv-text); cursor: pointer; touch-action: manipulation; }
 .dv-button:hover:not(:disabled) { background: var(--dv-hover); }
 .dv-button:active:not(:disabled) { background: var(--dv-raised); }

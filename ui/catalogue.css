@@ -1,11 +1,11 @@
 body { margin:0; background:var(--dv-surface); color:var(--dv-text); font:16px/1.6 var(--dv-font); }
 ::selection { background:var(--dv-action); color:var(--dv-action-ink); }
 .catalogue { max-width:1060px; padding:40px 28px 80px; margin:auto; }
-.catalogue h1 { font-size:clamp(32px,5vw,54px); font-weight:500; line-height:1.08; letter-spacing:-.03em; margin:12px 0 20px; }
-.catalogue h2 { font-size:22px; font-weight:500; margin:0 0 10px; }
+.catalogue h1 { font-size:clamp(32px,5vw,54px); font-weight:400;font-family:var(--dv-heading-font); line-height:1.08; letter-spacing:-.03em; margin:12px 0 20px; }
+.catalogue h2 { font-size:22px; font-weight:400;font-family:var(--dv-heading-font); margin:0 0 10px; }
 .catalogue section { border-top:1px solid var(--dv-rule); padding:28px 0; margin-top:28px; }
-.catalogue .eyebrow { color:var(--dv-action); font:12px/1.5 var(--dv-code); }
-.catalogue p { max-width:65ch; color:var(--dv-secondary); }
+.catalogue .eyebrow { color:var(--dv-action); font:12px/1.5 var(--dv-breadcrumb-font); }
+.catalogue p { font-family:var(--dv-reading-font);max-width:65ch; color:var(--dv-secondary); }
 .catalogue code { font:13px/1.6 var(--dv-code); color:var(--cyan); }
 .catalogue .specimen { display:flex; align-items:center; flex-wrap:wrap; gap:12px; margin:20px 0; }
 .catalogue .note { font-size:13px; }

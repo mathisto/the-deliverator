@@ -4,10 +4,12 @@
   --dv-text: var(--fg); --dv-secondary: var(--muted); --dv-rule: var(--line);
   --dv-control-edge: var(--muted); --dv-focus: var(--accent); --dv-action: var(--accent);
   --dv-action-ink: var(--bg); --dv-danger: var(--red);
-  --dv-font: 'DM Sans', system-ui, sans-serif;
-  --dv-heading-font: var(--dv-font); --dv-heading-weight: 500; --dv-heading-tracking: -.025em;
-  --dv-reading-font: var(--dv-font); --dv-reading-size: 16px;
-  --dv-code: 'JetBrains Mono', ui-monospace, monospace;
+  --dv-font: 'Iosevka Aile', sans-serif;
+  --dv-heading-font: 'Iosevka Etoile', serif; --dv-heading-weight: 400; --dv-heading-tracking: -.015em;
+  --dv-reading-font: 'Iosevka Aile', sans-serif; --dv-reading-size: 18px;
+  --dv-code: 'Iosevka', ui-monospace, monospace;
+  --dv-breadcrumb-font: 'Iosevka', ui-monospace, monospace;
+  --dv-control-font-size:16px; --dv-control-font-weight:400;
   --dv-control-radius: 8px; --dv-panel-radius: 12px;
   --dv-target: 44px; --dv-gap: 8px; --dv-section-gap: 32px;
   --dv-press-duration:100ms; --dv-feedback-duration:150ms; --dv-ink-duration:120ms; --dv-boundary-duration:180ms;
