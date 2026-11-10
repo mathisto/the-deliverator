@@ -10,7 +10,7 @@ A dark color system built around a blue-black ground and one charged yellow-gree
 
 ## Try it
 
-The component library is taking shape alongside the palette. **[Component contracts and local catalogue](docs/components.md)** cover the first native controls and exhibit composition. This is an unpublished reference slice, not a stable UI kit.
+The component library is taking shape alongside the palette. Start with the **[design-system guide](docs/design-system.md)**, then the [component contracts and catalogue](docs/components.md). The [agent entry point](docs/agent-entry.md) keeps implementation guidance in one place. This is an unpublished reference slice, not a stable UI kit.
 
 **[Open the live Lisp theme study](https://lisp.mattkelly.io/?theme=deliverator-signal).** Use its palette menu to compare the original Deliverator and other themes. The candidate does not overwrite a saved theme choice.
 
