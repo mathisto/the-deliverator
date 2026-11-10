@@ -6,7 +6,7 @@
   --dv-action-ink: var(--bg); --dv-danger: var(--red);
   --dv-font: 'DM Sans', system-ui, sans-serif;
   --dv-code: 'JetBrains Mono', ui-monospace, monospace;
-  --dv-control-radius: 4px; --dv-panel-radius: 12px;
+  --dv-control-radius: 8px; --dv-panel-radius: 12px;
   --dv-target: 44px; --dv-gap: 8px; --dv-section-gap: 32px;
   color-scheme: dark;
 }

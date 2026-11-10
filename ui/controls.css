@@ -4,7 +4,7 @@ dv-range { display: block; min-width: 150px; flex: 1; }
 dv-choice-group { display: inline-block; max-width: 100%; }
 dv-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: var(--dv-gap); }
 .dv-button, .dv-range, .dv-choices { font: 500 14px/1.3 var(--dv-font); color: var(--dv-text); }
-.dv-button { box-sizing: border-box; display: inline-flex; justify-content: center; align-items: center; gap: 8px; min-height: var(--dv-target); min-width: var(--dv-target); padding: 9px 13px; border: 1px solid var(--dv-control-edge); border-radius: var(--dv-control-radius); background: transparent; color: var(--dv-text); cursor: pointer; touch-action: manipulation; }
+.dv-button { box-sizing: border-box; display: inline-flex; justify-content: center; align-items: center; gap: 8px; min-height: var(--dv-target); min-width: var(--dv-target); padding: 9px 13px; border: 1px solid transparent; border-radius: var(--dv-control-radius); background: var(--dv-raised); color: var(--dv-text); cursor: pointer; touch-action: manipulation; }
 .dv-button:hover:not(:disabled) { background: var(--dv-hover); }
 .dv-button:active:not(:disabled) { background: var(--dv-raised); }
 .dv-button[aria-pressed=true] { border-color: var(--dv-action); color: var(--dv-action); background: var(--dv-raised); }
@@ -12,16 +12,17 @@ dv-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: var(--dv-
 .dv-button[data-variant=primary]:hover:not(:disabled) { text-decoration: underline; text-underline-offset: 3px; }
 .dv-button:disabled, .dv-range input:disabled { opacity: .45; cursor: not-allowed; }
 .dv-button:focus-visible, .dv-range input:focus-visible { outline: 2px solid var(--dv-focus); outline-offset: 4px; }
-.dv-button svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.dv-button svg { width: 24px; height: 24px; fill: currentColor; stroke: none; flex: none; }
 .dv-button .button-label { pointer-events: none; }
-.dv-icon { padding: 10px; }
+.dv-icon { padding: 9px; }
+.dv-icon svg[data-dv-icon=play], .dv-icon svg[data-dv-icon=pause], .dv-icon svg[data-dv-icon=stop] { color:var(--dv-action); width:22px; height:22px; }
 .dv-icon .button-label, .dv-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
-.dv-choices { display: flex; flex-wrap: wrap; gap: 4px; }
-.dv-choices .dv-button { border-color: transparent; border-bottom-color: var(--dv-control-edge); border-radius: 0; }
-.dv-choices .dv-button[aria-pressed=true] { border-bottom: 3px solid var(--dv-action); padding-bottom: 7px; }
-.dv-range { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 2px 12px; }
-.dv-range output { color: var(--dv-secondary); font-family: var(--dv-code); font-size: 12px; font-variant-numeric: tabular-nums; }
-.dv-range input[type=range] { grid-column: 1/-1; width: 100%; min-width:0; min-height: var(--dv-target); height:var(--dv-target); margin: 0; appearance:none; background:transparent; accent-color: var(--dv-action); cursor: pointer; }
+.dv-choices { display: flex; flex-wrap: wrap; gap: 4px; width:fit-content;max-width:100%;box-sizing:border-box;padding:4px; border-radius:calc(var(--dv-control-radius) + 4px); background:var(--dv-raised); }
+.dv-choices .dv-button { border-color: transparent; border-radius:var(--dv-control-radius); background:transparent; }
+.dv-choices .dv-button[aria-pressed=true] { border-color:var(--dv-action); background:var(--dv-hover); color:var(--dv-action); }
+.dv-range { display: grid; grid-template-columns: auto minmax(60px,1fr) 4ch; align-items: center; gap: 12px; }
+.dv-range output { grid-column:3;grid-row:1;text-align:right;color: var(--dv-secondary); font-family: var(--dv-code); font-size: 12px; font-variant-numeric: tabular-nums; }
+.dv-range input[type=range] { grid-column:2;grid-row:1; width: 100%; min-width:0; min-height: var(--dv-target); height:var(--dv-target); margin: 0; appearance:none; background:transparent; accent-color: var(--dv-action); cursor: pointer; }
 .dv-range input[type=range]::-webkit-slider-runnable-track { height:3px; border-radius:0; background:linear-gradient(to right,var(--dv-action) var(--dv-range-fill),var(--dv-control-edge) var(--dv-range-fill)); }
 .dv-range input[type=range]::-webkit-slider-thumb { appearance:none; width:16px; height:16px; margin-top:-6.5px; border:2px solid var(--dv-action); border-radius:50%; background:var(--dv-surface); }
 .dv-range input[type=range]:hover::-webkit-slider-thumb, .dv-range input[type=range]:active::-webkit-slider-thumb { background:var(--dv-action); }

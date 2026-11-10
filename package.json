@@ -4,13 +4,25 @@
   "private": true,
   "type": "module",
   "description": "Deliverator component reference implementation; unpublished Signal study.",
-  "exports": { ".": "./dist/deliverator.js", "./controls.css": "./ui/controls.css", "./tokens.css": "./ui/tokens.css" },
+  "exports": {
+    ".": "./dist/deliverator.js",
+    "./controls.css": "./ui/controls.css",
+    "./tokens.css": "./ui/tokens.css"
+  },
   "scripts": {
-    "build": "vite build",
+    "build": "node tools/build-icons.mjs && vite build && node tools/build-icons.mjs",
     "storybook": "storybook dev -p 6010 --host 127.0.0.1 --no-open --disable-telemetry",
     "build-storybook": "storybook build --disable-telemetry",
-    "check": "tsc --noEmit"
+    "check": "node tools/build-icons.mjs && tsc --noEmit"
   },
-  "dependencies": { "lit": "3.3.3" },
-  "devDependencies": { "@storybook/web-components-vite": "10.6.6", "storybook": "10.6.6", "typescript": "~5.9.3", "vite": "8.3.7" }
+  "dependencies": {
+    "@phosphor-icons/core": "2.1.1",
+    "lit": "3.3.3"
+  },
+  "devDependencies": {
+    "@storybook/web-components-vite": "10.6.6",
+    "storybook": "10.6.6",
+    "typescript": "~5.9.3",
+    "vite": "8.3.7"
+  }
 }

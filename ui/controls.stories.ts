@@ -1,5 +1,7 @@
 import { html } from 'lit';
 import './index';
+import { iconMarkup } from './index';
+import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 export default { title: 'Deliverator/Controls', parameters: { layout: 'fullscreen' } };
 export const Reference = { render: () => html`<main class="catalogue">
   <div class="eyebrow">THE DELIVERATOR / COMPONENT STUDY 01</div>
@@ -14,3 +16,5 @@ export const Reference = { render: () => html`<main class="catalogue">
 </main>` };
 export const Disabled = { render: () => html`<main class="catalogue"><h1>Unavailable controls</h1><p>Use when the engine is loading or unavailable; explain why in the owning exhibit.</p><dv-toolbar label="Unavailable preview"><dv-icon-button label="Play preview" icon="play" disabled></dv-icon-button><dv-choice-group label="Practice views" value="both" disabled .options=${[{value:'sheet',label:'Sheet'},{value:'both',label:'Both'},{value:'falling',label:'Notes'}]}></dv-choice-group></dv-toolbar><dv-range label="Metal roughness" value=".25" disabled></dv-range></main>` };
 export const Exhibit = { render: () => html`<main class="catalogue"><div class="eyebrow">COMPOSITION / DV-EXHIBIT</div><h1>An artifact and its context.</h1><p>The component owns the boundary and responsive split. The host supplies both slots. In the portfolio test bench, the stage contains the real engine.</p><dv-exhibit heading="Renderer controls"><div slot="stage"><dv-toolbar label="Renderer controls"><dv-range label="Metal roughness" value=".25"></dv-range><dv-icon-button label="Pause renderer" icon="pause"></dv-icon-button><dv-icon-button label="Reset view" icon="reset"></dv-icon-button></dv-toolbar></div><div slot="context">A control-only composition specimen. No renderer is running in this story; the local portfolio consumer exercises the real WASM renderer with these same components.</div></dv-exhibit></main>` };
+
+export const Icons = { render: () => html`<main class="catalogue"><div class="eyebrow">ICONOGRAPHY / PHOSPHOR</div><h1>A single family.</h1><p>Regular icons for general UI. Filled media controls for immediate recognition. All SVGs come from the pinned MIT-licensed Phosphor package; this grid is our approved subset.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px;margin:36px 0">${['play','pause','stop','reset','sand','water','stone','erase','github','palette','open-project','back-to-top','close'].map(name=>html`<div><span class="icon-swatch">${unsafeSVG(iconMarkup(name))}</span><code>${name}</code></div>`)}</div><p>Open a project: an app-window symbol beside a descriptive link. No diagonal launch arrows. Icons inherit the selected palette.</p></main>` };

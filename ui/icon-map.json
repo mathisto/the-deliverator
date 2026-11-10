@@ -1,0 +1,15 @@
+{
+  "play": "fill/play-fill.svg",
+  "pause": "fill/pause-fill.svg",
+  "stop": "fill/stop-fill.svg",
+  "reset": "regular/arrow-counter-clockwise.svg",
+  "sand": "regular/hourglass-medium.svg",
+  "water": "regular/drop.svg",
+  "stone": "regular/mountains.svg",
+  "erase": "regular/eraser.svg",
+  "github": "regular/github-logo.svg",
+  "palette": "regular/palette.svg",
+  "open-project": "regular/app-window.svg",
+  "back-to-top": "regular/caret-up.svg",
+  "close": "regular/x.svg"
+}

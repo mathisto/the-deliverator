@@ -1,20 +1,16 @@
 import { LitElement, html, css, nothing } from 'lit';
+import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
+import { icons } from './icons.generated';
+export function iconMarkup(name: string) { if (!icons[name]) throw new Error(`Unknown Deliverator icon: ${name}`); return icons[name]; }
 
 // Light DOM is deliberate: native controls keep ordinary forms, labels and engine adapters usable.
 // The library owns this markup; consumers listen on nativeControl, and own application state.
-const paths: Record<string, string> = {
-  play: 'm8 4 12 8-12 8Z', pause: 'M8 5v14M16 5v14', reset: 'M3 11a9 9 0 1 1 2.6 6.4M3 4v7h7',
-  sand: 'M5 3h14M5 21h14M7 3v4l10 10v4M17 3v4L7 17v4',
-  water: 'M12 3s-7 8-7 12a7 7 0 0 0 14 0c0-4-7-12-7-12Z',
-  stone: 'm4 8 6-5 8 2 3 10-5 6-11-2Z', erase: 'm3 14 10-11 8 8-9 10H9Zm5-5 8 8M12 21h9',
-  github: 'M9 19c-5 2-5-3-7-3m14 6v-4a3.5 3.5 0 0 0-1-3c3-.3 6-1.5 6-6a4.7 4.7 0 0 0-1.3-3.3 4.4 4.4 0 0 0-.1-3.2S17.5 2 15 3.8a13 13 0 0 0-6 0C6.5 2 4.9 2.5 4.9 2.5a4.4 4.4 0 0 0-.1 3.2A4.7 4.7 0 0 0 3.5 9c0 4.5 3 5.7 6 6a3.5 3.5 0 0 0-1 3v4'
-};
 class NativeControl extends LitElement {
   static properties = { label: {}, controlId: { attribute: 'control-id' }, disabled: { type: Boolean }, icon: {}, variant: {} };
   label = ''; controlId = ''; disabled = false; icon = ''; variant = 'quiet';
   createRenderRoot() { return this; }
   get nativeControl() { return this.querySelector<HTMLButtonElement>('button'); }
-  protected glyph() { return this.icon ? html`<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d=${paths[this.icon] || paths.play}></path></svg>` : nothing; }
+  protected glyph() { return this.icon ? unsafeSVG(iconMarkup(this.icon)) : nothing; }
   render() { return html`<button class="dv-button" type="button" id=${this.controlId || nothing} ?disabled=${this.disabled} data-variant=${this.variant}>${this.glyph()}<span class="button-label">${this.label}</span></button>`; }
 }
 export class DeliveratorButton extends NativeControl {}
@@ -23,9 +19,13 @@ export class DeliveratorIconButton extends NativeControl {
 }
 /** Legacy/native engine adapter. Does not replace the focused button or own engine state. */
 export function setAction(button: HTMLButtonElement, label: string, icon: string) {
-  button.setAttribute('aria-label', label); button.title = label;
+  if (button.getAttribute('aria-label') !== label) button.setAttribute('aria-label', label); button.title = label;
   const text = button.querySelector('.button-label'); if (text) text.textContent = label;
-  const path = button.querySelector('path'); if (path) path.setAttribute('d', paths[icon] || paths.play);
+  const glyph = button.querySelector('svg');
+  if (glyph?.getAttribute('data-dv-icon') !== icon) {
+    const template = document.createElement('template'); template.innerHTML = iconMarkup(icon);
+    if (glyph) glyph.replaceWith(template.content); else button.prepend(template.content);
+  }
 }
 export type Choice = { value: string; label: string; icon?: string };
 export class DeliveratorChoiceGroup extends LitElement {
@@ -36,7 +36,7 @@ export class DeliveratorChoiceGroup extends LitElement {
     this.value = value;
     this.dispatchEvent(new CustomEvent('dv-change', { detail: { value }, bubbles: true, composed: true }));
   }
-  render() { return html`<div class="dv-choices" role="group" aria-label=${this.label}>${this.options.map(option => html`<button type="button" class="dv-button" ?disabled=${this.disabled} title=${this.iconOnly ? option.label : nothing} aria-pressed=${String(option.value === this.value)} data-value=${option.value} @click=${() => this.select(option.value)}>${option.icon ? html`<svg viewBox="0 0 24 24" aria-hidden="true"><path d=${paths[option.icon] || paths.play}></path></svg>` : nothing}<span class=${this.iconOnly && option.icon ? 'dv-sr-only' : ''}>${option.label}</span></button>`)}</div>`; }
+  render() { return html`<div class="dv-choices" role="group" aria-label=${this.label}>${this.options.map(option => html`<button type="button" class="dv-button" ?disabled=${this.disabled} title=${this.iconOnly ? option.label : nothing} aria-pressed=${String(option.value === this.value)} data-value=${option.value} @click=${() => this.select(option.value)}>${option.icon ? unsafeSVG(iconMarkup(option.icon)) : nothing}<span class=${this.iconOnly && option.icon ? 'dv-sr-only' : ''}>${option.label}</span></button>`)}</div>`; }
 }
 let nextId = 0;
 export class DeliveratorRange extends LitElement {
